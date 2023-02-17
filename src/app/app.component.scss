@@ -40,7 +40,14 @@
                 width: 100%;
                 font-size: 30px;
                 color: #49c5b6;
-                text-align: center;
+                font-size: 25px;
+                text-align: left;
+
+
+                .myname {
+                    text-align: left;
+                    font-size: 18px;
+                }
             }
 
             .hero-Bottom {
@@ -94,6 +101,36 @@
             display: none;
         }
 
+        .scroll-downs {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+
+            .mousey {
+                width: 4px;
+                padding: 10px 15px;
+                height: 35px;
+                border: 2px solid #fff;
+                border-radius: 25px;
+                opacity: 0.75;
+                box-sizing: content-box;
+            }
+
+            .scroller {
+                width: 4px;
+                height: 10px;
+                border-radius: 25%;
+                background-color: #fff;
+                animation-name: scroll;
+                animation-duration: 2.2s;
+                animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+                animation-iteration-count: infinite;
+            }
+        }
+
+
         /* Section settings */
         section {
             position: sticky;
@@ -115,13 +152,13 @@
         #coverimage-section {
 
             /* circle arrow icon */
-            .fa-circle-arrow-up {
+/*             .fa-circle-arrow-up {
                 position: absolute;
                 bottom: 20px;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 color: white;
-            }
+            } */
 
             /* picture - background */
             img {
@@ -149,8 +186,8 @@
             }
 
             .about {
-               width: 80%;
-               height: 80%;
+                width: 80%;
+                height: 80%;
 
             }
 
@@ -211,7 +248,7 @@
                     align-items: center;
                     justify-content: center;
                     position: relative;
-                    padding: 10px;
+                    padding: 20px;
                     background-color: #eeeded;
 
                     .grid-title {
@@ -270,7 +307,7 @@
                 height: 100%;
                 width: 100%;
 
-                .contact-list{
+                .contact-list {
                     height: 90%;
                     width: 90%;
                 }
@@ -497,6 +534,22 @@
     }
 }
 
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
 
 @media only screen and (max-width: 1024px) {
 
@@ -527,8 +580,9 @@
             width: 100vw;
 
             #about-section {
-                display:inline-flex;
+                display: inline-flex;
                 justify-content: baseline;
+
                 .about {
                     padding: 15px;
                 }
@@ -548,15 +602,31 @@
 
             }
 
-            #contact-section{
-                .contact{
+            #task-section {
+
+                .grid-container {
+
+                    .grid-item {
+                        padding: 10px;
+                    }
+
+                    .grid-text {
+                        font-size: 12px;
+                    }
+                }
+
+            }
+
+            #contact-section {
+                .contact {
 
                     width: 100%;
                     height: 100%;
 
-                    .contact-list{
+                    .contact-list {
                         width: 80%;
-                        .h1-contact{
+
+                        .h1-contact {
                             padding: 20px;
                         }
                     }
@@ -566,17 +636,17 @@
                         font-size: 16px;
                         color: #000000;
                     }
-    
+
                     .phone {
                         margin-left: 26px;
                         font-size: 16px;
                     }
-    
+
                     .gmail {
                         font-size: 16px;
                         margin-left: 23px;
                     }
-    
+
                     .contact-text a {
                         color: #929292;
                         text-decoration: none;

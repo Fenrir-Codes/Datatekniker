@@ -559,6 +559,8 @@
 
         .left-panel {
             width: 100%;
+            overflow: scroll;
+            overflow-x: hidden;
 
             .left-container {
 
@@ -578,6 +580,10 @@
             overflow: scroll;
             overflow-x: hidden;
             width: 100vw;
+
+          #coverimage-section{
+            display: none;
+          }
 
             #about-section {
                 display: inline-flex;
